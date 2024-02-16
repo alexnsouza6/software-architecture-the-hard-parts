@@ -1,4 +1,4 @@
-# Discerning Coupling in Software Architecture
+# Chapter 2 - Discerning Coupling in Software Architecture
 
 Architects design fine-grained microservices to achieve decoupling, but then orchestration, transactionality, and asynchronicity become huge problems. Generic advice says “decouple,” but provides no guidelines for how to achieve that goal while still constructing useful systems.
 
@@ -7,8 +7,8 @@ Given that scenario, architects struggle with performing trade-off analysis. Thu
 Still about that, the authors start the journey of untangling of forces in distributed architectures defining architecture quantum along with two types of coupling: static and dynamic.
 
 ## Architecture Quantum
-First of all, to bring more historic context, ~Quantum~ originated from the Latin word ~quantus~, meaning “how great” or “how
-many.”. With that, An architecture ~quantum~ is an independently deployable artifact with high functional cohesion, high static coupling, and synchronous dynamic coupling. A common example of an architecture quantum is a well-formed microservice within a workflow.
+First of all, to bring more historic context, _Quantum_ originated from the Latin word _quantus_, meaning “how great” or “how
+many.”. With that, An architecture _quantum_ is an independently deployable artifact with high functional cohesion, high static coupling, and synchronous dynamic coupling. A common example of an architecture quantum is a well-formed microservice within a workflow.
 
 ## Static Coupling
 Represents how static dependencies resolve within the architecture via contracts. These dependencies include operating system, frameworks, and/or libraries delivered via transitive dependency management, and any other operational requirement to allow the quantum to operate.
@@ -17,7 +17,7 @@ Represents how static dependencies resolve within the architecture via contracts
 Represents how quanta communicate at runtime, either synchronously or asynchronously.
 
 ## Static x Dynamic Coupling
-An easy way to think abouyt the diff between Static and Dynamic Coupling is that STATIC describes how services are ~wired~ together, whereas dynamic describes how services ~call~ one another at runtime. For example, in a microservicesarchitecture, a service must contain dependent components such as a database, representing static coupling—the service isn’t operational without the necessary data. That service may call other services during the course of a workflow, which represents dynamic coupling.
+An easy way to think abouyt the diff between Static and Dynamic Coupling is that STATIC describes how services are _wired_ together, whereas dynamic describes how services _call_ one another at runtime. For example, in a microservicesarchitecture, a service must contain dependent components such as a database, representing static coupling—the service isn’t operational without the necessary data. That service may call other services during the course of a workflow, which represents dynamic coupling.
 
 When talking about Static and Dynamic Coupling, we need to highlight some important characteristics, such as Independently Deployable, High Functional Cohesion and High Static Coupling.
 
