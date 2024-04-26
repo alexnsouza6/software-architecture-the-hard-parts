@@ -146,6 +146,22 @@ The Sidecar pattern represents not only a way to decouple operational capabiliti
 
 The Sidecar pattern and service mesh offer a clean way to spread some sort of cross-cutting concern across a distributed architecture, and can be used by more than just operational coupling (see Chapter 14). It offers an architectural equivalent to the Decorator Design Pattern from the Gang of Four Design Patterns book (Addison Wesley)—it allows an architect to “decorate” behavior across a distributed architecture independent of the normal connectivity.
 
-Ford, Neal; Richards, Mark; Sadalage, Pramod; Dehghani, Zhamak. Software Architecture: The Hard Parts (p. 383). O'Reilly Media. Kindle Edition.
+## Code Reuse: When DOes It Add Value?
 
-Ford, Neal; Richards, Mark; Sadalage, Pramod; Dehghani, Zhamak. Software Architecture: The Hard Parts (pp. 381-382). O'Reilly Media. Kindle Edition.    
+Reuse is one of the most abused abstractions, because the general view in organizations is that reuse represents a laudable goal that teams should strive for. However, failing to evaluate all the trade-offs associated with reuse can lead to serious problems within architecture.
+
+![Code Reuse Case](./code-reuse-case.png)
+
+While the picture in Figure 8-17 may seem logical, it’s an architectural disaster for two reasons. First, if all institutional information about a key entity like Customer must reside in a single place, that entity must be complex enough to handle any domain and scenario, making it difficult to use for simple things. Secondly, though, it creates brittleness within the architecture. If every domain that needs customer information must get it from a single place, when that place changes, everything breaks.
+
+What architects failed to realize is that reuse has two important aspects; they got the first one correct: abstraction. The way architects and developers discover candidates for reuse is via abstraction. However, the second consideration is the one that determines utility and value: rate of change.
+
+Internal domain capabilities or quick-changing technical frameworks make terrible coupling targets.
+
+Tip: Reuse is derived via abstraction but operationalized by slow rate of change.
+
+### Reuse via Platforms
+
+However, most agree that the platform is the new target of reuse within organizations, meaning that for each distinguishable domain capability, the organization builds a platform with a well-defined API to hide the implementation details.
+
+Slow rate of change drives this reasoning. As we discuss in Chapter 13, an API can be designed to be quite loosely coupled to callers, allowing for an aggressive internal rate of change of implementation details without breaking the API. This, of course, doesn’t protect the organization from changes to the semantics of the information it must pass between domains, but by careful design of encapsulation and contracts, architects can limit the amount of breaking change and brittleness in integration architecture.
