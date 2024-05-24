@@ -11,7 +11,7 @@ In the image below, three coupling forces are illustrated, showing the interacti
 
   
 
-![Figure 11-1](images/Figure11-1.jpg)
+![Figure 11-1](images/Figure11-1.JPG)
 
   
 
@@ -19,7 +19,7 @@ Coordination: combining two or more services in a distributed architecture to pe
 
   
 
-![Figure 11-2](images/Figure11-2.jpg)
+![Figure 11-2](images/Figure11-2.JPG)
 
   
 
@@ -27,7 +27,7 @@ Coordination: combining two or more services in a distributed architecture to pe
 
   
 
-![Figure 11-3](images/Figure11-3.jpg)
+![Figure 11-3](images/Figure11-3.JPG)
 
   
 
